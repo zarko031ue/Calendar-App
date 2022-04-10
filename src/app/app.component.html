@@ -1,0 +1,15 @@
+
+<div class="calendar">
+  <p  (click)="onPreviousMonth()">Previous</p>
+  {{monthName}} {{currentYear}}
+  <p (click)="onNextMonth()">Next</p>
+ <div class="calendar">
+  <ng-container *ngFor="let day of days" >
+    <div class="box">
+      {{ day }}
+    </div>
+  </ng-container>
+  <ng-container  *ngFor="let day of monthDays" >
+    <div class="box">{{ day }}</div>
+  </ng-container>
+</div>
